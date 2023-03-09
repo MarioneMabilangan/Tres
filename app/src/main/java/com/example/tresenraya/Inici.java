@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import java.text.MessageFormat;
 
 public class Inici extends AppCompatActivity {
-    ImageView comingsoon;
+    ImageView comingsoon, settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,14 @@ public class Inici extends AppCompatActivity {
         setContentView(R.layout.activity_inici);
         getSupportActionBar().hide();
         ImageView tutorial = findViewById(R.id.comojugar);
+        ImageView jugar = findViewById(R.id.local);
         setupSetMessage();
+        jugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Inici.this, Local.class));
+            }
+        });
         tutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +41,17 @@ public class Inici extends AppCompatActivity {
 
     private void setupSetMessage() {
         comingsoon = findViewById(R.id.enlinea);
+        settings = findViewById(R.id.settings);
         comingsoon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager = getSupportFragmentManager();
+                Comingsoon cm = new Comingsoon();
+
+                cm.show(manager, "MessageDialog");
+            }
+        });
+        settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentManager manager = getSupportFragmentManager();
