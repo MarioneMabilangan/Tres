@@ -47,7 +47,7 @@ public class MainGame extends AppCompatActivity {
                 TextView status = findViewById(R.id.status);
 
 
-                status.setText("O's Turn - Tap to play");
+                status.setText("O");
             } else {
 
                 img.setImageResource(R.drawable.o);
@@ -55,7 +55,7 @@ public class MainGame extends AppCompatActivity {
                 TextView status = findViewById(R.id.status);
 
 
-                status.setText("X's Turn - Tap to play");
+                status.setText("X");
             }
             img.animate().translationYBy(1000f).setDuration(300);
         }

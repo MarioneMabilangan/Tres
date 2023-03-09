@@ -9,7 +9,7 @@
     tools:context=".MainGame">
 
 
-    <!--image of the grid-->
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <!--images of the grid boxes-->
+
 
             <ImageView
                 android:id="@+id/imageView0"
@@ -126,7 +126,7 @@
         </LinearLayout>
 
     </LinearLayout>
-    <!--game status text display-->
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -145,7 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15sp"
-        android:text="Status"
+        android:text="Empieza X"
         android:textSize="28sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"

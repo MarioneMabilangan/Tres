@@ -14,6 +14,7 @@ public class Local extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local);
         getSupportActionBar().hide();
+        ImageView atras = findViewById(R.id.atras);
         ImageView pvp = findViewById(R.id.pvp);
         ImageView ia = findViewById(R.id.ia);
         pvp.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +27,12 @@ public class Local extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Local.this, Pantallacargaia.class));
+            }
+        });
+        atras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Local.this, Inici.class));
             }
         });
     }

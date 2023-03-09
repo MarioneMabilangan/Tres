@@ -37,19 +37,7 @@ public class MainActivity extends AppCompatActivity {
         webView.setBackgroundColor(Color.TRANSPARENT);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("file:///android_res/raw/amogus.gif");
-        webView.setWebViewClient(new WebViewClient() {
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-            view.loadUrl("javascript:(function() { " +
-                    "var css = document.createElement('link');" +
-                    "css.setAttribute('rel', 'stylesheet');" +
-                    "css.setAttribute('type', 'text/css');" +
-                    "css.setAttribute('href', 'file:///android_asset/style.css');" +
-                    "document.head.appendChild(css);" +
-                    "})()");
-        }
-    });
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
